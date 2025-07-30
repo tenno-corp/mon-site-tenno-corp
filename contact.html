@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous | TENNO Corporation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+   
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Contactez-nous</h1>
+                <p>Nous sommes là pour répondre à toutes vos questions. N'hésitez pas à nous contacter pour toute demande d'information.</p>
+            </div>
+        </div>
+        
+        <div class="shape-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Nos Coordonnées</h2>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Adresse</h3>
+                            <p>Secteur 37<br>OUAGADOUGOU, BURKINA FASO</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:+22666341894">+226 66 34 18 94</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p><a href="mailto:tennosociety@gmail.com">tennosociety@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Horaires d'ouverture</h3>
+                            <p>Lundi - Vendredi: 9h - 18h<br>Samedi: 10h - 16h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1S3FhW4mnt/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/ten_no47830" aria-label="Twitter"><i class="fab fa-x"></i></a>
+                        <a href="https://www.linkedin.com/in/ten-no-undefined-8b8497377?trk=contact-info" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/tennocorporation" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Envoyez-nous un message</h2>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="required">Nom Complet</label>
+                            <input type="text" id="name" name="from_name" class="form-control" placeholder="Votre nom" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="required">Adresse Email</label>
+                            <input type="email" id="email" name="from_email" class="form-control" placeholder="votre@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Votre numéro">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="required">Sujet</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Sujet de votre message" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="required">Message</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Votre message..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submitBtn" class="btn-submit">
+                            <span id="buttonText">Envoyer le message</span>
+                            <span id="buttonLoader" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Envoi en cours...
+                            </span>
+                        </button>
+                        <div id="statusMessage" class="status-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.358511367894!2d-1.6223729999999996!3d12.425816699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2e93367ff733b3%3A0x7073a41cd668114a!2s%C3%89glise%20Notre-Dame-De-Yagma!5e0!3m2!1sfr!2sfr!4v1752934262731!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Emplacement de TENNO Corporation"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Questions Fréquentes</h2>
+                <p>Retrouvez ici les réponses aux questions les plus courantes</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Comment puis-je prendre rendez-vous ? 
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous pouvez prendre rendez-vous en nous appelant directement au +226 66 34 18 94 ou en utilisant notre formulaire de contact en ligne. Notre équipe vous répondra dans les plus brefs délais pour confirmer votre rendez-vous.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quels sont vos horaires d'ouverture ?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous sommes ouverts du lundi au vendredi de 9h à 18h et le samedi de 10h à 16h. Nos bureaux sont fermés les dimanches et jours fériés.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Combien de temps faut-il pour obtenir une réponse ?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous nous engageons à répondre à toutes les demandes dans un délai maximum de 24 heures ouvrables. Pour les demandes urgentes, veuillez nous contacter par téléphone.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Proposez-vous des services en ligne ?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons une gamme complète de services en ligne, y compris des consultations à distance, des devis en ligne et un suivi personnalisé via notre plateforme sécurisée.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TENNO Corporation</h3>
+                    <p style="color: #bbb; margin-bottom: 20px;">Nous nous engageons à fournir des services de qualité exceptionnelle avec une approche centrée sur le client.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1S3FhW4mnt/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/ten_no47830" aria-label="x"><i class="fab fa-x"></i></a>
+                        <a href="https://www.linkedin.com/in/ten-no-undefined-8b8497377?trk=contact-info" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/tennocorporation" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens Rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="/index.html">Accueil</a></li>
+                        <li><a href="/a-propos.html">À propos</a></li>
+                        <li><a href="/nos-services.html">Services</a></li>
+                        
+                       
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Secteur 37 OUAGADOUGOU, BURKINA FASO</li>
+                        <li><i class="fas fa-phone" style="margin-right: 10px;"></i> +226 66 34 18 94</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> tennosociety@gmail.com</li>
+                        <li><i class="fas fa-clock" style="margin-right: 10px;"></i> Lun-Ven: 9h-18h</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 TENNO Corporation. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+<script>
+    
+        // Initialisation d'EmailJS avec votre User ID
+        (function() {
+            emailjs.init('LF5e_y0HutZwmOvH0');
+        })();
+
+        // Gestion de l'affichage du bouton "scroll to top"
+        const scrollTopButton = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopButton.classList.add('show');
+            } else {
+                scrollTopButton.classList.remove('show');
+            }
+        });
+        
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                const isActive = item.classList.contains('active');
+                
+                // Fermer tous les autres éléments FAQ
+                document.querySelectorAll('.faq-item').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Ouvrir l'élément cliqué si ce n'était pas déjà actif
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Form Submission avec EmailJS
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const buttonText = document.getElementById('buttonText');
+        const buttonLoader = document.getElementById('buttonLoader');
+        const statusMessage = document.getElementById('statusMessage');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Désactiver le bouton pendant l'envoi
+            submitBtn.disabled = true;
+            buttonText.style.display = 'none';
+            buttonLoader.style.display = 'inline-block';
+            statusMessage.style.display = 'none';
+            
+            // Envoi d'email via EmailJS
+            emailjs.sendForm('service_iugtm32', 'template_wfi4qoh', this)
+                .then(function(response) {
+                    // Message de succès
+                    statusMessage.textContent = 'Message envoyé avec succès! Nous vous répondrons très prochainement.';
+                    statusMessage.className = 'status-message success';
+                    statusMessage.style.display = 'block';
+                    
+                    // Réinitialisation du formulaire
+                    contactForm.reset();
+                    
+                    // Animation de succès
+                    submitBtn.style.animation = 'pulse 0.5s ease';
+                    setTimeout(() => {
+                        submitBtn.style.animation = '';
+                    }, 500);
+                }, function(error) {
+                    // Gestion des erreurs
+                    statusMessage.textContent = 'Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter par téléphone.';
+                    statusMessage.className = 'status-message error';
+                    statusMessage.style.display = 'block';
+                    console.error('Erreur EmailJS:', error);
+                    
+    emailjs.sendForm('service_iugtm32', 'template_wfi4qoh', this)
+        .then(function(response) {
+            console.log('Email envoyé avec succès!', response);
+            // ... (code existant) ...
+        }, function(error) {
+            console.error('Échec de l\'envoi:', error);
+            // Ajouter un message d'erreur détaillé
+            let errorMessage = 'Erreur lors de l\'envoi. ';
+            
+            if (error.status === 400) {
+                errorMessage += 'Configuration EmailJS incorrecte.';
+            } else if (error.status === 402) {
+                errorMessage += 'Quota EmailJS dépassé.';
+            } else {
+                errorMessage += `Code d'erreur: ${error.status}`;
+            }
+            
+            statusMessage.textContent = errorMessage;
+            statusMessage.className = 'status-message error';
+            statusMessage.style.display = 'block';
+        
+        
+});
+                })
+                
+                .finally(function() {
+                    // Réactiver le bouton
+                    submitBtn.disabled = false;
+                    buttonText.style.display = 'inline-block';
+                    buttonLoader.style.display = 'none';
+                    
+                    // Cacher le message après 5 secondes
+                    setTimeout(() => {
+                        statusMessage.style.display = 'none';
+                    }, 5000);
+                });
+        });
+   
+</script>
+    
+</body>
+</html>

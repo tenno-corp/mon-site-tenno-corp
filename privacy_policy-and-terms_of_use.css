@@ -1,0 +1,415 @@
+
+        :root {
+            --primary-blue: #005bac;         /* Bleu primaire */
+            --secondary-blue: #0077cc;        /* Bleu secondaire */
+            --light-blue: #e6f2ff;           /* Bleu très clair */
+            --accent-blue: #003d7e;          /* Bleu foncé */
+            --refund-orange: #d35400;        /* Orange pour remboursement */
+            --white: #ffffff;                /* Blanc */
+            --light-gray: #f8f9fa;           /* Gris très clair */
+            --medium-gray: #e9ecef;          /* Gris moyen */
+            --dark-gray: #495057;            /* Gris foncé */
+            --text-color: #212529;           /* Couleur de texte principale */
+            --success-color: #28a745;        /* Couleur de succès */
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(120deg, var(--primary-blue), var(--accent-blue));
+            color: var(--white);
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .tabs {
+            display: flex;
+            background-color: var(--light-blue);
+            border-bottom: 1px solid #ddd;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--dark-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tab-btn.active {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+        
+        .tab-btn:not(.active):hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .tab-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary-blue);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: var(--transition);
+        }
+        
+        .tab-btn.active::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .document-container {
+            display: none;
+            padding: 40px;
+            background: var(--white);
+        }
+        
+        .document-container.active {
+            display: block;
+        }
+        
+        .document-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+        
+        .document-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .document-body {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .legal-card {
+            background: var(--light-blue);
+            border-left: 5px solid var(--primary-blue);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .legal-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        h3 {
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-blue);
+            font-size: 1.6rem;
+        }
+        
+        ul {
+            margin: 15px 0 25px 40px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+        
+        li:before {
+            content: "•";
+            color: var(--primary-blue);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        strong {
+            color: var(--dark-gray);
+        }
+        
+        .important-note {
+            background: #fff8e6;
+            border-left: 5px solid #ffc107;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .important-note h4 {
+            color: #d35400;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+            background: var(--light-blue);
+            border-top: 1px solid #ddd;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-download {
+            background: var(--success-color);
+            color: var(--white);
+        }
+        
+        .btn-download:hover {
+            background: #219653;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+        }
+        
+        .btn-print {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+        
+        .btn-print:hover {
+            background: var(--accent-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 91, 172, 0.4);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--accent-blue);
+            color: var(--white);
+            font-size: 0.95rem;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Styles spécifiques pour la section Remboursement */
+        .refund-section {
+            background: #fdf5ec;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 1px solid var(--refund-orange);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .refund-section:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: var(--refund-orange);
+        }
+        
+        .refund-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .refund-header i {
+            font-size: 2.5rem;
+            color: var(--refund-orange);
+        }
+        
+        .refund-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .refund-table th {
+            background: var(--refund-orange);
+            color: var(--white);
+            text-align: left;
+            padding: 15px;
+        }
+        
+        .refund-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f0e6d8;
+        }
+        
+        .refund-table tr:nth-child(even) {
+            background-color: #fdf5ec;
+        }
+        
+        .refund-table tr:hover {
+            background-color: rgba(211, 84, 0, 0.05);
+        }
+        
+        .refund-process {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .refund-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .refund-step:not(:last-child):after {
+            content: "→";
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--refund-orange);
+        }
+        
+        .refund-number {
+            width: 40px;
+            height: 40px;
+            background: var(--refund-orange);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+        
+        .no-refund {
+            background: #fef2f2;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+        
+        .no-refund h4 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        /* Style pour l'en-tête de la section Remboursement */
+        .refund-header h2 {
+            color: var(--refund-orange);
+        }
+        
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .refund-process {
+                flex-direction: column;
+            }
+            
+            .refund-step {
+                margin-bottom: 30px;
+            }
+            
+            .refund-step:not(:last-child):after {
+                content: "↓";
+                right: 50%;
+                top: auto;
+                bottom: -25px;
+                left: auto;
+                transform: translateX(50%);
+            }
+            
+            header {
+                padding: 20px;
+            }
+            
+            .document-container {
+                padding: 25px;
+            }
+            
+            .actions {
+                flex-direction: column;
+            }
+        }
+   

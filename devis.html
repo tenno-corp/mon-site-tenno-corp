@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devis Importation Chine-Burkina | Tenno Corporation</title>
+<link rel="stylesheet" href="/frontend/css/devis.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">TC</div>
+                <h1>Devis Importation Chine-Burkina Faso</h1>
+            </div>
+            <p class="subtitle">Obtenez un devis personnalisé pour vos importations en 24h. Expertise douanière, logistique optimisée et solutions clé en main.</p>
+            
+            <div class="flags">
+                <div class="flag flag-china">CN</div>
+                <div class="flag flag-burkina">BF</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <div class="form-container">
+                <h2>Demander un devis</h2>
+                <form id="devisForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" required placeholder="Votre nom et prénom">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Entreprise</label>
+                        <input type="text" id="company" placeholder="Nom de votre entreprise">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="votre@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" required placeholder="Votre numéro de téléphone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="marchandise">Type de marchandise</label>
+                        <select id="marchandise" required>
+                            <option value="">Sélectionnez un type</option>
+                            <option value="textile">Textile et habillement</option>
+                            <option value="electronique">Produits électroniques</option>
+                            <option value="materiel">Matériel médical</option>
+                            <option value="machines">Machines et équipements</option>
+                            <option value="alimentaire">Produits alimentaires</option>
+                            <option value="autres">Autres</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="poids">Poids estimé (kg)</label>
+                        <input type="number" id="poids" min="1" placeholder="Poids total en kilogrammes">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="volume">Volume estimé (m³)</label>
+                        <input type="number" id="volume" min="0.1" step="0.1" placeholder="Volume en mètres cubes">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="valeur">Valeur de la marchandise (€)</label>
+                        <input type="number" id="valeur" min="1" placeholder="Valeur estimée en euros">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="depart">Lieu de chargement en Chine</label>
+                        <select id="depart" required>
+                            <option value="">Sélectionnez une ville</option>
+                            <option value="guangzhou">Guangzhou</option>
+                            <option value="shenzhen">Shenzhen</option>
+                            <option value="shanghai">Shanghai</option>
+                            <option value="ningbo">Ningbo</option>
+                            <option value="yiwu">Yiwu</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="arrivee">Lieu de livraison au Burkina Faso</label>
+                        <select id="arrivee" required>
+                            <option value="">Sélectionnez une ville</option>
+                            <option value="ouagadougou">Ouagadougou</option>
+                            <option value="bobo">Bobo-Dioulasso</option>
+                            <option value="koudougou">Koudougou</option>
+                            <option value="ouahigouya">Ouahigouya</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Services additionnels</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="emballage" value="emballage">
+                                <label for="emballage">Emballage sécurisé</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="assurance" value="assurance" checked>
+                                <label for="assurance">Assurance transport</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="dedouanement" value="dedouanement" checked>
+                                <label for="dedouanement">Dédouanement</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="stockage" value="stockage">
+                                <label for="stockage">Stockage temporaire</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="controle" value="controle">
+                                <label for="controle">Contrôle qualité</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="livraison" value="livraison" checked>
+                                <label for="livraison">Livraison finale</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Informations supplémentaires</label>
+                        <textarea id="message" rows="4" placeholder="Détails sur votre marchandise, délais souhaités, exigences particulières..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Obtenir mon devis</button>
+                </form>
+            </div>
+            
+            <div class="benefits">
+                <h2>Pourquoi choisir Tenno Corp?</h2>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div class="benefit-content">
+                        <h3>Expertise Douanière</h3>
+                        <p>Maîtrise des procédures Burkina Faso (CTN, DPI) et réglementations chinoises à l'export.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏱</div>
+                    <div class="benefit-content">
+                        <h3>Délais Garantis</h3>
+                        <p>Transit Chine-Burkina en 25-35 jours avec suivi GPS en temps réel.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-content">
+                        <h3>Tarifs Compétitifs</h3>
+                        <p>Jusqu'à 20% d'économie grâce à nos accords avec les transporteurs.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌱</div>
+                    <div class="benefit-content">
+                        <h3>Solution Éco-responsable</h3>
+                        <p>Compensation carbone et emballages recyclables inclus.</p>
+                    </div>
+                </div>
+                
+                <div class="pricing">
+                    <h3>Exemples de Tarifs</h3>
+                    <div class="price-item">
+                        <span>Conteneur 20' (Guangzhou-Ouaga)</span>
+                        <span class="price-value">2 800 €</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Groupage (par m³)</span>
+                        <span class="price-value">180 €</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Fret aérien (par kg)</span>
+                        <span class="price-value">8,50 €</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Dédouanement</span>
+                        <span class="price-value">à partir de 150 €</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Tenno Corporation - Import/Export Chine-Burkina Faso</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📞</span>
+                    <span>+226 25 45 67 89</span>
+                </div>
+                <div class="contact-item">
+                    <span>✉️</span>
+                    <span>devis@tenno-corp.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>🏢</span>
+                    <span>Ouagadougou, Secteur 15</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('devisForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupération des valeurs
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // Simulation d'envoi
+            alert(`Merci ${name}! Votre demande de devis a été envoyée. Nous vous contacterons à ${email} dans les 24 heures.`);
+            
+            // Réinitialisation du formulaire
+            this.reset();
+        });
+    </script>
+</body>
+</html>

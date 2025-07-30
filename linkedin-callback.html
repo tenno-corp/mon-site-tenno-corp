@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion LinkedIn</title>
+    <style>
+        /* ... (style de la page d'attente) ... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Connexion en cours</h1>
+        <p>Veuillez patienter pendant que nous vous connectons...</p>
+        <div class="spinner"></div>
+        <p>Vous serez redirigé automatiquement vers Tenno Corporation</p>
+    </div>
+
+    <script>
+        // Récupérer les paramètres d'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const state = urlParams.get('state');
+        const error = urlParams.get('error');
+        
+        // Vérifier les erreurs
+        if (error) {
+            window.location.href = '/login.html?error=linkedin_' + error;
+            return;
+        }
+        
+        // Vérifier le state (sécurité)
+        const savedState = sessionStorage.getItem('linkedin_state');
+        if (state !== savedState) {
+            window.location.href = '/login.html?error=state_mismatch';
+            return;
+        }
+        
+        // Envoyer le code au serveur
+        fetch('/api/linkedin-auth', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ code })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.token) {
+                // Stocker le token et rediriger
+                localStorage.setItem('authToken', data.token);
+                setTimeout(() => window.location.href = '/', 2000);
+            } else {
+                window.location.href = '/login.html?error=auth_failed';
+            }
+        })
+        .catch(err => {
+            console.error('Erreur:', err);
+            window.location.href = '/login.html?error=server_error';
+        });
+    </script>
+</body>
+</html>
